@@ -12,3 +12,30 @@ body
   color: white;
   font-family: 'outfit';
 }
+
+
+@keyframes borderChange {
+  0% {
+    border-color: blue;
+  }
+  25% {
+    border-color: red;
+  }
+  50% {
+    border-color: green;
+  }
+  75% {
+    border-color: purple;
+  }
+  100% {
+    border-color: blue;
+  }
+}
+
+.animate-borderChange {
+  animation: borderChange 4s infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}

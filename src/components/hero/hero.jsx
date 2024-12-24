@@ -17,7 +17,6 @@ const Hero = () => {
 
   // Fetch view count from the backend on component mount
   useEffect(() => {
-    // Replace with the appropriate API call to get the view count
     axios.get('http://localhost:5000/api/views/1')  // Example: Get view count for project with ID 1
       .then(response => {
         setViewCount(response.data.views);  // Set the fetched view count
@@ -66,9 +65,11 @@ const Hero = () => {
           <p className="mt-2 md:max-w-md md:break-words md:text-2xl">
             Using Spring Boot API server on backend development while using SQL data structure backend.
           </p>
-          <button className="bg-slate-600 border-2 p-2 mt-2 rounded-lg border-rose-800">
+         <a href="#contactme"> <button  className="bg-slate-600 border-2 p-2 mt-2 rounded-lg border-rose-800">
+           
             Contact Us
-          </button>
+          </button></a>
+          
         </div>
       </div>
     </div>

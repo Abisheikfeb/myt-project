@@ -38,7 +38,7 @@ const PdfDownloadCard = () => {
   };
 
   return (
-    <div className="mt-12 ">
+    <div id="certificate" className="mt-12 ">
         <h1 className="text-center font-medium mt-10 text-3xl">
         <span className="text-red-400 text-5xl">C</span>ertificates</h1>
     <div className="grid place-items-center grid-cols-1  md:grid-cols-3 gap-6  p-10">

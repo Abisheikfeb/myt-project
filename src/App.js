@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './App.css';
 import Navbar from './components/navbar/navbar';
 import Hero from './components/hero/hero';
@@ -9,20 +10,27 @@ import Certificate from './components/certificate/certificate';
 import Contact from './components/contact/contact';
 
 function App() {
-  return (
-   <>
+  const [user, setUser] = useState(null); // Manage login state
 
-   <Navbar/>
-   <Hero/>
-   <About/>
-   <Eaducation/>
-   <Myskill/>
-   <Project/>
-   <Certificate/>
-   <Contact/>
-   </>
-    
+  const handleLogin = (loggedInUser) => {
+    setUser(loggedInUser); // Set user after login
+  };
+
+  return (
+    <>
+      <Navbar onLogin={handleLogin} user={user} />
+      <Hero />
+      <About />
+      <Eaducation />
+      <Myskill />
+      {/* Pass isLoggedIn as prop to Project */}
+      <Project isLoggedIn={!!user} />
+      <Certificate />
+      <Contact />
+    </>
   );
 }
 
 export default App;
+
+

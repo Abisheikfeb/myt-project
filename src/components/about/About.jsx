@@ -6,7 +6,7 @@ import { Bs0Circle } from "react-icons/bs";
 
 const About = () => {
   return (
-    <div>
+    <div id='aboutme'>
         
         <h1 className='text-center text-3xl mt-4 '><span className='text-red-400 text-5xl'>A</span>bout me </h1>
         <div className='mt-10 ' >

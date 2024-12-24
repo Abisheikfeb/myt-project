@@ -29,7 +29,7 @@ export default function MultiFilters() {
   }, [activeFilter, filterItems]);
 
   return (
-    <div>
+    <div id="myskill">
       <div className="font-medium text-3xl text-center mt-20">
         <h1><span className="text-4xl text-red-400">MY</span> SKILLS</h1>
       </div>
@@ -39,7 +39,7 @@ export default function MultiFilters() {
           <button
             onClick={() => handleFilterButtonClick(category)}
             className={`
-              flex border-2 justify-center bg-red-200 hover:bg-green-200 text-sm ml-6
+              flex border-2 animate-borderChange justify-center bg-red-200 hover:bg-green-200 text-sm ml-6
               h-8 mt-3 w-36 rounded-md text-black  md:h-12 md:w-40 md:text-start md:px-4 md:py-2 md:text-lg ${activeFilter === category ? "active" : ""}
             `}
             key={category}

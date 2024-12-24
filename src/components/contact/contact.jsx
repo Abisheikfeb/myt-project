@@ -46,7 +46,7 @@ export const ContactUs = () => {
   };
 
   return (
-    <div className="mt-12">
+    <div id="contactme" className="mt-12">
       <h1 className="text-center font-medium mt-10 text-3xl">
         <span className="text-5xl text-red-400">C</span>ontact Me
       </h1>
