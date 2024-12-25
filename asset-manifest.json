@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/myt-project/static/css/main.4d5cedd1.css",
-    "main.js": "/myt-project/static/js/main.6a687eac.js",
+    "main.js": "/myt-project/static/js/main.2279f35f.js",
     "static/media/my image.jpg": "/myt-project/static/media/my image.ebb510467ad6d751f3ef.jpg",
     "static/media/sample1.pdf": "/myt-project/static/media/sample1.09f77cdac1d2ed98682d.pdf",
     "static/media/sample3.pdf": "/myt-project/static/media/sample3.6ef5bcc1eb77a89008fd.pdf",
@@ -37,10 +37,10 @@
     "index.html": "/myt-project/index.html",
     "static/media/git-logo.svg": "/myt-project/static/media/git-logo.43d387b77657117c0e407816cbf72476.svg",
     "main.4d5cedd1.css.map": "/myt-project/static/css/main.4d5cedd1.css.map",
-    "main.6a687eac.js.map": "/myt-project/static/js/main.6a687eac.js.map"
+    "main.2279f35f.js.map": "/myt-project/static/js/main.2279f35f.js.map"
   },
   "entrypoints": [
     "static/css/main.4d5cedd1.css",
-    "static/js/main.6a687eac.js"
+    "static/js/main.2279f35f.js"
   ]
 }
