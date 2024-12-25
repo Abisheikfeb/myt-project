@@ -11,7 +11,7 @@ const About = () => {
         <h1 className='text-center text-3xl mt-4 '><span className='text-red-400 text-5xl'>A</span>bout me </h1>
         <div className='mt-10 ' >
         <h1 className='ml-14 text-2xl mt-10 md:text-5xl md:ml-10'>Iam work on
-            <p className='text-3xl font-extralight text-red-200'>Here somy my skills</p>
+            <p className='text-3xl font-extralight text-red-200'>Here some my skills</p>
         </h1>
         <div className='ml-16 '>
             <h1 className=' mt-5  text-blue-600 text-2xl'>BACK END</h1>

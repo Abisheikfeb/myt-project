@@ -6,7 +6,7 @@ const RegisterForm = ({ onLogin }) => {
   const [formData, setFormData] = useState({ name: '', email: '', password: '' });
   const [message, setMessage] = useState('');
   
-  // Access the API base URL from .env
+  
   const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
   const handleChange = (e) => {
@@ -23,7 +23,7 @@ const RegisterForm = ({ onLogin }) => {
     try {
       const res = await axios.post(url, formData);
       setMessage(`Welcome, ${res.data.name || formData.name}!`);
-      onLogin(res.data); // Pass user data to parent component
+      onLogin(res.data); 
     } catch (error) {
       setMessage(error.response?.data?.message || 'An error occurred.');
     }

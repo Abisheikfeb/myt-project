@@ -4,30 +4,26 @@ import { IoClose } from 'react-icons/io5';
 import RegisterForm from '../../components/RegisterForm';
 
 const Navbar = ({ onLogin, user }) => {
-  const [nav, setNav] = useState(false); // Toggle for mobile menu
-  const [isRegisterOpen, setIsRegisterOpen] = useState(false); // Toggle for Register Modal
+  const [nav, setNav] = useState(false);
+  const [isRegisterOpen, setIsRegisterOpen] = useState(false); 
 
-  // Toggle Navigation Menu
+  
   const handleNavigation = () => setNav(!nav);
 
-  // Open and Close Register Modal
   const openRegister = () => setIsRegisterOpen(true);
   const closeRegister = () => setIsRegisterOpen(false);
 
-  // Handle Login Callback
   const handleLogin = (loggedInUser) => {
-    onLogin(loggedInUser); // Update App State
-    closeRegister(); // Close Modal
+    onLogin(loggedInUser); 
+    closeRegister(); 
   };
 
   return (
-    <div className="w-full bg-gray-400/90 mt-1 rounded-3xl border-2 border-red-500 drop-shadow-lg md:rounded-4xl relative">
-      {/* Navbar Desktop */}
+    <div id='home' className="w-full bg-gray-400/90 mt-1 rounded-3xl border-2 border-red-500 drop-shadow-lg md:rounded-4xl relative">
+      
       <div className="flex items-center justify-between h-[50px] w-full px-8">
         <div className="flex items-center">
-          {/* Logo */}
           <h1 className="text-pink-800 text-2xl font-semibold md:text-4xl">ABISHEIK</h1>
-          {/* Navbar Links */}
           <ul className="hidden md:flex space-x-10 ml-40">
             <li><a href="#home">Home</a></li>
             <li><a href="#aboutme">About Me</a></li>
@@ -36,7 +32,6 @@ const Navbar = ({ onLogin, user }) => {
             <li><a href="#certificate">Certificate</a></li>
             <li><a href="#contactme">Contact Me</a></li>
           </ul>
-          {/* Sign In / User Greeting */}
           <div className="flex items-end ml-2 rounded-3xl gap-6">
             {user ? (
               <button className="bg-green-600 px-3 py-1 rounded-lg flex md:ml-20 text-sm sm:text-base truncate">
@@ -52,13 +47,12 @@ const Navbar = ({ onLogin, user }) => {
             )}
           </div>
         </div>
-        {/* Mobile Menu Toggle */}
         <div className="md:hidden" onClick={handleNavigation}>
           {!nav ? <FaListUl className="text-blue-700 h-5 w-5" /> : <IoClose className="text-blue-700 h-5 w-5" />}
         </div>
       </div>
 
-      {/* Navbar Mobile Menu */}
+     
       <div className="md:hidden">
         <ul className={!nav ? 'hidden' : 'w-full bg-white/98 absolute px-2 flex justify-end'}>
         <div className="border-2 animate-borderChange
@@ -86,7 +80,8 @@ const Navbar = ({ onLogin, user }) => {
 </ul>
 </div>
 
-      {/* Register Modal */}
+     
+
       {isRegisterOpen && (
         <div className="absolute w-full flex justify-center mt-16">
           <div className="bg-red-200 max-w-md p-10 px-5 w-72 md:w-full rounded-lg shadow-lg relative">

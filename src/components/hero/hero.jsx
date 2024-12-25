@@ -9,9 +9,9 @@ import axios from 'axios';
 
 const Hero = () => {
   const [showMore, setShowMore] = useState(false);
-  const [viewCount, setViewCount] = useState(0); // State to store the view count
+  const [viewCount, setViewCount] = useState(0);
 
-  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL; // Fetching from .env
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
   const toggleIcons = () => {
     setShowMore(!showMore);
@@ -24,15 +24,15 @@ const Hero = () => {
   const handleDownload = (fileUrl) => {
     const link = document.createElement("a");
     link.href = fileUrl;
-    link.download = fileUrl.split("/").pop(); // Extract filename
+    link.download = fileUrl.split("/").pop(); 
     link.click();
   };
 
-  // Fetch view count from the backend on component mount
+ 
   useEffect(() => {
-    axios.get(`${API_BASE_URL}/api/views/1`)  // Use API_BASE_URL from .env
+    axios.get(`${API_BASE_URL}/api/views/1`)  
       .then(response => {
-        setViewCount(response.data.views); // Set the fetched view count
+        setViewCount(response.data.views); 
       })
       .catch(error => {
         console.error('Error fetching view count:', error);
@@ -41,7 +41,6 @@ const Hero = () => {
 
   return (
     <div>
-      {/* Profile Image */}
       <div className="my-10 flex items-center justify-center">
         <img
           className="h-72 w-40 rounded-3xl border-2 border-red-300 shadow-2xl shadow-red-400"
@@ -50,14 +49,13 @@ const Hero = () => {
         />
       </div>
 
-      {/* View Count */}
       <div className="absolute top-16 ml-4 text-white font-bold">
         <h2 className="text-xs flex items-center gap-1">
           Views <IoEyeOutline className='text-red-800' size={16} />: {viewCount}
         </h2>
       </div>
 
-      {/* Contact Icons Toggle (For Mobile) */}
+    
       <div className="md:hidden relative flex flex-col items-start space-y-4">
         <button onClick={toggleIcons} className="p-3">
           <IoCallOutline className="text-blue-500" size={24} />
@@ -81,7 +79,7 @@ const Hero = () => {
         )}
       </div>
 
-      {/* Text Content */}
+    
       <div className="flex ml-10 font-bold md:ml-20 md:mt-10">
         <div>
           <h1 className="text-4xl text-amber-700">I am Abisheik</h1>
@@ -90,7 +88,6 @@ const Hero = () => {
             Using Spring Boot API server on backend development while using SQL data structure backend.
           </p>
           
-          {/* Buttons */}
           <div className="mt-4 flex space-x-4">
             <a href="#contactme">
               <button className="bg-slate-600 border-2 p-2 rounded-lg border-rose-800">
@@ -101,7 +98,7 @@ const Hero = () => {
               onClick={() => handleDownload(pdfFiles[0].file)}
               className="bg-green-600 border-2 p-2 rounded-lg border-green-800 flex items-center" 
             >
-              <span>Download</span>
+              <span>RESUME</span>
               <FaDownload className="ml-2" />
             </button>
           </div>

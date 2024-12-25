@@ -8,7 +8,7 @@ import image3 from '../../assets/spam.svg';
 import image4 from '../../assets/chat.svg';
 import axios from 'axios';
 
-// Sample project data
+
 const initialData = [
   { id: 1, src: image1, alt: 'JAVA', link:'https://abisheikfeb.github.io/tic-ta-to/' },
   { id: 2, src: image2, alt: 'C#', link: 'https://abisheikfeb.github.io/tempmessage/' },
@@ -20,10 +20,9 @@ const Project = ({ isLoggedIn }) => {
   const [showLoginMessage, setShowLoginMessage] = useState(false);
   const [likeCounts, setLikeCounts] = useState({});
 
-  // Get API base URL from .env
+
   const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
-  // Fetch like counts from the backend
   useEffect(() => {
     const fetchLikeCounts = async () => {
       try {
@@ -57,7 +56,7 @@ const Project = ({ isLoggedIn }) => {
 
   const handleLikeClick = async (projectId) => {
     try {
-      // Use the API_BASE_URL from .env
+      
       const response = await axios.post(`${API_BASE_URL}/api/likes/${projectId}`);
       setLikeCounts((prev) => ({
         ...prev,
@@ -86,7 +85,6 @@ const Project = ({ isLoggedIn }) => {
               <p className="text-lg text-center text-red-400">{image.alt}</p>
             </div>
             <div className="flex justify-between items-center">
-              {/* Like Button */}
               <button
                 onClick={() => handleLikeClick(image.id)}
                 className="flex justify-end text-red-400 p-1"
@@ -97,7 +95,6 @@ const Project = ({ isLoggedIn }) => {
                 </div>
               </button>
 
-              {/* Link Button */}
               <button
                 onClick={() => handleLinkClick(image.link)}
                 className="text-blue-500 hover:text-yellow-300"
@@ -119,12 +116,13 @@ const Project = ({ isLoggedIn }) => {
             <p className="text-lg mb-4 text-red-400 font-medium">
               🚫 Please log in to visit this link!
             </p>
-            <button
-              onClick={closeLoginMessage}
-              className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
-            >
-              Close
-            </button>
+           
+           <a href="#home"><button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+             onClick={closeLoginMessage}>
+            <h1 >login</h1>
+           
+
+           </button></a>
           </div>
         </div>
       )}

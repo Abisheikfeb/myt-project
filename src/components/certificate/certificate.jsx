@@ -33,7 +33,7 @@ const PdfDownloadCard = () => {
   const handleDownload = (fileUrl) => {
     const link = document.createElement("a");
     link.href = fileUrl;
-    link.download = fileUrl.split("/").pop(); // Extract filename
+    link.download = fileUrl.split("/").pop();
     link.click();
   };
 
