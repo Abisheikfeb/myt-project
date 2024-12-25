@@ -10,10 +10,10 @@ import axios from 'axios';
 
 // Sample project data
 const initialData = [
-  { id: 1, src: image1, alt: 'JAVA', link: 'https://example1.com' },
-  { id: 2, src: image2, alt: 'C#', link: 'https://example2.com' },
-  { id: 3, src: image3, alt: 'PYTHON', link: 'https://example3.com' },
-  { id: 4, src: image4, alt: 'PYTHON', link: 'https://example4.com' },
+  { id: 1, src: image1, alt: 'JAVA', link:'https://abisheikfeb.github.io/tic-ta-to/' },
+  { id: 2, src: image2, alt: 'C#', link: 'https://abisheikfeb.github.io/tempmessage/' },
+  { id: 3, src: image3, alt: 'PYTHON', link: 'https://abisheikfeb.github.io/tempmessage/' },
+  { id: 4, src: image4, alt: 'PYTHON', link: 'https://abisheikfeb.github.io/tempmessage/' },
 ];
 
 const Project = ({ isLoggedIn }) => {

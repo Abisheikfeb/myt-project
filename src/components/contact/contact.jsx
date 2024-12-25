@@ -52,11 +52,18 @@ export const ContactUs = () => {
       </h1>
       <div className=" mt-10 flex flex-row justify-center gap-5 text-3xl ">
         
-        <FaLinkedin />
-        <BsGithub />
+       <a href="https://www.linkedin.com/in/abisheik-s-7227b2304/" target="_blank" rel="noopener noreferrer">
+        <FaLinkedin /></a>
+       
+       <a href="mailto:abisheik2004feb@gmail.com" target="_blank" rel="noopener noreferrer">
         <GoMail />
-        <FaInstagram />
-  
+        </a>
+        <a href="https://www.instagram.com/abisheik_feb27/profilecard/?igsh=MWRkNzR3bDZudDVscg==" target="_blank" rel="noopener noreferrer">
+        <FaInstagram /></a>
+        <a href="https://github.com/Abisheikfeb" target="_blank" rel="noopener noreferrer">
+  <BsGithub />
+</a>
+
         </div>
       <div className="flex justify-center mt-16">
         <form
