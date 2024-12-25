@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import photo from '../../assets/my image.jpg';
-import { IoCallOutline } from "react-icons/io5";
+import { IoCallOutline, IoEyeOutline } from "react-icons/io5";
 import { FaLinkedin, FaInstagram, FaDownload } from "react-icons/fa6";
 import { BsGithub } from "react-icons/bs";
 import { GoMail } from "react-icons/go";
 import sample1 from '../../pdf/RESUME.pdf';
-import { IoEyeOutline } from "react-icons/io5";
 import axios from 'axios';
 
 const Hero = () => {
   const [showMore, setShowMore] = useState(false);
   const [viewCount, setViewCount] = useState(0); // State to store the view count
+
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL; // Fetching from .env
 
   const toggleIcons = () => {
     setShowMore(!showMore);
@@ -29,14 +30,14 @@ const Hero = () => {
 
   // Fetch view count from the backend on component mount
   useEffect(() => {
-    axios.get('http://localhost:5000/api/views/1')  // Example: Get view count for project with ID 1
+    axios.get(`${API_BASE_URL}/api/views/1`)  // Use API_BASE_URL from .env
       .then(response => {
         setViewCount(response.data.views); // Set the fetched view count
       })
       .catch(error => {
         console.error('Error fetching view count:', error);
       });
-  }, []);
+  }, [API_BASE_URL]);
 
   return (
     <div>
@@ -51,10 +52,10 @@ const Hero = () => {
 
       {/* View Count */}
       <div className="absolute top-16 ml-4 text-white font-bold">
-  <h2 className="text-xs flex items-center gap-1">
-    Views  <IoEyeOutline className='text-red-800' size={16} />: {viewCount}
-  </h2>
-</div>
+        <h2 className="text-xs flex items-center gap-1">
+          Views <IoEyeOutline className='text-red-800' size={16} />: {viewCount}
+        </h2>
+      </div>
 
       {/* Contact Icons Toggle (For Mobile) */}
       <div className="md:hidden relative flex flex-col items-start space-y-4">

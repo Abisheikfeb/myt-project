@@ -5,21 +5,25 @@ const RegisterForm = ({ onLogin }) => {
   const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({ name: '', email: '', password: '' });
   const [message, setMessage] = useState('');
+  
+  // Access the API base URL from .env
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
     const url = isLogin
-      ? 'http://localhost:5000/api/auth/login'
-      : 'http://localhost:5000/api/auth/register';
+      ? `${API_BASE_URL}/api/auth/login`
+      : `${API_BASE_URL}/api/auth/register`;
 
     try {
       const res = await axios.post(url, formData);
       setMessage(`Welcome, ${res.data.name || formData.name}!`);
-      onLogin(res.data); // Pass user data to App.jsx
+      onLogin(res.data); // Pass user data to parent component
     } catch (error) {
       setMessage(error.response?.data?.message || 'An error occurred.');
     }
@@ -71,5 +75,3 @@ const RegisterForm = ({ onLogin }) => {
 };
 
 export default RegisterForm;
-
-

@@ -20,12 +20,15 @@ const Project = ({ isLoggedIn }) => {
   const [showLoginMessage, setShowLoginMessage] = useState(false);
   const [likeCounts, setLikeCounts] = useState({});
 
+  // Get API base URL from .env
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
   // Fetch like counts from the backend
   useEffect(() => {
     const fetchLikeCounts = async () => {
       try {
         const likePromises = initialData.map((project) =>
-          axios.get(`http://localhost:5000/api/likes/${project.id}`).then((response) => ({
+          axios.get(`${API_BASE_URL}/api/likes/${project.id}`).then((response) => ({
             id: project.id,
             count: response.data.count,
           }))
@@ -42,7 +45,7 @@ const Project = ({ isLoggedIn }) => {
     };
 
     fetchLikeCounts();
-  }, []);
+  }, [API_BASE_URL]);
 
   const handleLinkClick = (link) => {
     if (isLoggedIn) {
@@ -54,8 +57,8 @@ const Project = ({ isLoggedIn }) => {
 
   const handleLikeClick = async (projectId) => {
     try {
-      // Use the full URL to send the POST request for liking a project
-      const response = await axios.post(`http://localhost:5000/api/likes/${projectId}`);
+      // Use the API_BASE_URL from .env
+      const response = await axios.post(`${API_BASE_URL}/api/likes/${projectId}`);
       setLikeCounts((prev) => ({
         ...prev,
         [projectId]: response.data.count,
@@ -130,7 +133,3 @@ const Project = ({ isLoggedIn }) => {
 };
 
 export default Project;
-
-
-
-
