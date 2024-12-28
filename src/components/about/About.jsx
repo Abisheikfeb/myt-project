@@ -64,7 +64,7 @@ const About = () => {
           <span>Problem Solving</span>
         </div>
         <div className="w-16 sm:w-24 bg-gray-200 h-2 rounded-full">
-          <div className="bg-red-500 h-2 rounded-full w-3/4"></div> {/* Adjust width percentage based on proficiency */}
+          <div className="bg-red-500 h-2 rounded-full w-3/4"></div> 
         </div>
       </div>
       <div className="flex items-center justify-between text-base sm:text-xl">
@@ -73,7 +73,7 @@ const About = () => {
           <span>Backend API & REST Operations</span>
         </div>
         <div className="w-16 sm:w-24 bg-gray-200 h-2 rounded-full">
-          <div className="bg-yellow-500 h-2 rounded-full w-2/3"></div> {/* Adjust width percentage based on proficiency */}
+          <div className="bg-yellow-500 h-2 rounded-full w-2/3"></div> 
         </div>
       </div>
       <div className="flex items-center justify-between text-base sm:text-xl">
@@ -82,7 +82,7 @@ const About = () => {
           <span>Experience in Banking Projects</span>
         </div>
         <div className="w-16 sm:w-24 bg-gray-200 h-2 rounded-full">
-          <div className="bg-blue-500 h-2 rounded-full w-4/5"></div> {/* Adjust width percentage based on proficiency */}
+          <div className="bg-blue-500 h-2 rounded-full w-4/5"></div> 
         </div>
       </div>
       <div className="flex items-center justify-between text-base sm:text-xl">
@@ -91,7 +91,7 @@ const About = () => {
           <span>Multi-Function Handling</span>
         </div>
         <div className="w-16 sm:w-24 bg-gray-200 h-2 rounded-full">
-          <div className="bg-green-500 h-2 rounded-full w-1/2"></div> {/* Adjust width percentage based on proficiency */}
+          <div className="bg-green-500 h-2 rounded-full w-1/2"></div> 
         </div>
       </div>
     </div>

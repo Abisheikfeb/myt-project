@@ -36,7 +36,6 @@ export default function MultiFilters() {
         </h1>
       </div>
 
-      {/* Filter Buttons */}
       <div className="grid grid-cols-3 gap-x-1 gap-y-1 text-sm mt-5 md:flex md:justify-center md:gap-4 ">
         {filters.map((category) => (
           <button
@@ -56,7 +55,6 @@ export default function MultiFilters() {
         ))}
       </div>
 
-      {/* Display Filtered Items */}
       <div className="flex flex-wrap gap-3 justify-center mt-10">
         {filteredItems.map((item) => (
           <div

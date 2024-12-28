@@ -39,7 +39,7 @@ const PdfDownloadCard = () => {
   ];
 
   const handleDownload = async (fileUrl, title, index) => {
-    setLoadingIndex(index); // Set loading state for the current button
+    setLoadingIndex(index); 
     try {
       const link = document.createElement("a");
       link.href = fileUrl;
@@ -50,7 +50,7 @@ const PdfDownloadCard = () => {
     } catch (error) {
       console.error("Download failed:", error);
     } finally {
-      setTimeout(() => setLoadingIndex(null), 2000); // Clear loading state after 2s
+      setTimeout(() => setLoadingIndex(null), 2000); 
     }
   };
 
