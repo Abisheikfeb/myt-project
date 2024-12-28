@@ -8,12 +8,14 @@ import Myskill from './components/myskill/myskills';
 import Project from './components/project/project';
 import Certificate from './components/certificate/certificate';
 import Contact from './components/contact/contact';
+import Footer from './components/footer/footer';
+
 
 function App() {
-  const [user, setUser] = useState(null); // Manage login state
+  const [user, setUser] = useState(null);
 
   const handleLogin = (loggedInUser) => {
-    setUser(loggedInUser); // Set user after login
+    setUser(loggedInUser);
   };
 
   return (
@@ -23,10 +25,12 @@ function App() {
       <About />
       <Eaducation />
       <Myskill />
-      {/* Pass isLoggedIn as prop to Project */}
       <Project isLoggedIn={!!user} />
       <Certificate />
       <Contact />
+      <Footer/>
+      
+      
     </>
   );
 }
