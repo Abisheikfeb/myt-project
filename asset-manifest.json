@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/myt-project/static/css/main.da672f01.css",
-    "main.js": "/myt-project/static/js/main.98e16483.js",
+    "main.css": "/myt-project/static/css/main.825729e5.css",
+    "main.js": "/myt-project/static/js/main.08a8e3e5.js",
     "static/media/my image.jpg": "/myt-project/static/media/my image.ebb510467ad6d751f3ef.jpg",
     "static/media/sample1.pdf": "/myt-project/static/media/sample1.09f77cdac1d2ed98682d.pdf",
+    "static/media/RESUME.pdf": "/myt-project/static/media/RESUME.d09b5cbe7e6e6973e9e8.pdf",
     "static/media/sample3.pdf": "/myt-project/static/media/sample3.6ef5bcc1eb77a89008fd.pdf",
     "static/media/sample5.pdf": "/myt-project/static/media/sample5.bb6b792f33b9b9a20439.pdf",
     "static/media/sample6.pdf": "/myt-project/static/media/sample6.2e671452121d7c0ae942.pdf",
     "static/media/sample4.pdf": "/myt-project/static/media/sample4.f08da25a1694a17d895a.pdf",
     "static/media/sample2.pdf": "/myt-project/static/media/sample2.88ac3d9a26555105310e.pdf",
     "static/media/sample7.pdf": "/myt-project/static/media/sample7.797a037cb38aa44605ce.pdf",
-    "static/media/RESUME.pdf": "/myt-project/static/media/RESUME.a2ad043b11d331b8efba.pdf",
     "static/media/mysql.svg": "/myt-project/static/media/mysql.ef0a906deea50cdbfbe2c80cc8716207.svg",
     "static/media/github.svg": "/myt-project/static/media/github.3fdab464274a83348d090264a884618f.svg",
     "static/media/calculator.svg": "/myt-project/static/media/calculator.b769840bbde03fb83d9e3486b9e740dc.svg",
@@ -38,11 +38,11 @@
     "static/media/express-js.svg": "/myt-project/static/media/express-js.13e4b3884f318c648bfe0207aa64c8dc.svg",
     "index.html": "/myt-project/index.html",
     "static/media/git-logo.svg": "/myt-project/static/media/git-logo.43d387b77657117c0e407816cbf72476.svg",
-    "main.da672f01.css.map": "/myt-project/static/css/main.da672f01.css.map",
-    "main.98e16483.js.map": "/myt-project/static/js/main.98e16483.js.map"
+    "main.825729e5.css.map": "/myt-project/static/css/main.825729e5.css.map",
+    "main.08a8e3e5.js.map": "/myt-project/static/js/main.08a8e3e5.js.map"
   },
   "entrypoints": [
-    "static/css/main.da672f01.css",
-    "static/js/main.98e16483.js"
+    "static/css/main.825729e5.css",
+    "static/js/main.08a8e3e5.js"
   ]
 }
