@@ -17,7 +17,7 @@ const initialData = [
   { id: 4, src: image4, alt: 'PYTHON', link: 'https://abisheikfeb.github.io/tempmessage/' },
   { id: 5, src: image5, alt: 'C#', link: 'https://abisheikfeb.github.io/tempmessage/' },
   { id: 6, src: image6, alt: 'java', link: 'https://abisheikfeb.github.io/tempmessage/' },
-]
+];
 
 const Project = ({ isLoggedIn }) => {
   const [showLoginMessage, setShowLoginMessage] = useState(false);
@@ -88,7 +88,7 @@ const Project = ({ isLoggedIn }) => {
   };
 
   const toggleShowMore = () => {
-    setShowMore((prev) => !prev);
+    setShowMore(true); // Only show more, no toggle back
   };
 
   return (
@@ -114,9 +114,9 @@ const Project = ({ isLoggedIn }) => {
               >
                 <div className="flex gap-2">
                   {likedProjects.has(image.id) ? (
-                    <IoIosHeart className="text-3xl text-red-600" /> // Filled red heart
+                    <IoIosHeart className="text-3xl text-red-600" />
                   ) : (
-                    <IoIosHeartEmpty className="text-3xl text-gray-500" /> // Empty heart
+                    <IoIosHeartEmpty className="text-3xl text-gray-500" />
                   )}
                   <span className="text-black font-semibold">{likeCounts[image.id] || 0}</span>
                 </div>
@@ -141,12 +141,14 @@ const Project = ({ isLoggedIn }) => {
       </div>
 
       <div className="text-center mt-4">
-        <button
-          onClick={toggleShowMore}
-          className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-lg font-semibold rounded-lg shadow-md hover:scale-105 hover:from-blue-600 hover:to-purple-700 transition-all duration-300 ease-in-out transform"
-        >
-          {showMore ? 'Show Less' : 'Show More'}
-        </button>
+        {!showMore && (
+          <button
+            onClick={toggleShowMore}
+            className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-lg font-semibold rounded-lg shadow-md hover:scale-105 hover:from-blue-600 hover:to-purple-700 transition-all duration-300 ease-in-out transform"
+          >
+            Show More
+          </button>
+        )}
       </div>
 
       {showLoginMessage && (
@@ -173,3 +175,5 @@ const Project = ({ isLoggedIn }) => {
 };
 
 export default Project;
+
+

@@ -1,57 +1,77 @@
-import React from 'react'
+import React from 'react';
 import { FaGraduationCap } from "react-icons/fa";
 import { FaSchool } from "react-icons/fa6";
 import { GiSchoolBag } from "react-icons/gi";
 import { RiPresentationLine } from "react-icons/ri";
 
-const myskill = () => {
+const MySkill = () => {
   return (
-    <div className=''>
-        <h1 className=' text-center font-medium mt-10 text-3xl'><span className='text-red-500 text-4xl'>My</span> education</h1>
-       
-       
-        <div className='flex flex-col items-center mr-10 mt-10 '>
-          
-        <div className=' mr-64 text-4xl  md:text-8xl text-purple-500 '><FaGraduationCap /></div>
-        <div className='h-10 w-1 mr-64 bg-orange-500'></div>
-            <div className='w-72 h-16 border-red-300 border-2 rounded-md'>
-              <div className='flex-col gap-2 mr-3 '>
-              <h1>HSE</h1>
-                <p><FaSchool  className='text-yellow-300'/></p>
-                <h1 className='ml-16 text-start place-items-center text-lg -mt-11'>maths computer at model school dharmapuri</h1>
-                </div>
-            </div>
-            <div className='h-10 w-1 mr-64 bg-orange-500'></div>
-            <div className='w-72 h-16  border-red-300 border-2 rounded-md'>
-              <div className='flex-col gap-2 mr-3'>
-              <h1>college</h1>
-            <p><GiSchoolBag className='text-yellow-300 ' /></p>
-            <h1 className='ml-16 text-start place-items-center text-lg -mt-11'>computer applications at don bosco college</h1>
-            
-            </div>
-            </div>
-            <div className='h-10 w-1 mr-64 bg-orange-500'></div>
-            <div className='w-72 h-16 border-red-300 border-2 rounded-md shadow-xl shadow-amber-500'>
-            <div className='flex-col gap-2 mr-3'>
-              <h1>course</h1>
-            <p>< RiPresentationLine className='text-yellow-300 ' /></p>
-            <h1 className='ml-16 text-start place-items-center text-lg -mt-11'> oracal data base at oracal university</h1>
-           
-            </div>
-            </div>
+    <div className="flex flex-col items-center mt-10 px-4">
+      <h1 className="text-center font-medium text-3xl">
+        <span className="text-red-500 text-4xl">My</span> Education
+      </h1>
 
-            <div className='h-10 w-1 mr-64 bg-orange-500'></div>
-            <div className='w-72 h-16 border-red-300 border-2 rounded-md shadow-xl shadow-amber-500'>
-            <div className='flex-col gap-2 mr-3'>
-              <h1>course</h1>
-            <p>< RiPresentationLine className='text-yellow-300 ' /></p>
-            <h1 className='ml-16 text-start place-items-center text-lg -mt-11'> cyber security in standard and regulations</h1>
-           
+      {/* Timeline Container */}
+      <div className="flex flex-col items-center mt-10 relative">
+        
+        {/* Graduation Cap Icon */}
+        <div className="text-6xl md:text-8xl text-purple-500">
+          <FaGraduationCap />
+        </div>
+
+        {/* Vertical Line */}
+        <div className="h-10 w-1 bg-orange-500"></div>
+
+        {/* Education Cards */}
+        <div className="space-y-6">
+          {/* High School */}
+          <div className="w-80 md:w-96 border-2 border-red-300 rounded-md p-3 shadow-md">
+            <h1 className="text-lg font-semibold">HSE</h1>
+            <div className="flex items-center gap-2 mt-1">
+              <FaSchool className="text-yellow-300 text-xl" />
+              <p className="text-sm">Maths Computer at Model School Dharmapuri</p>
             </div>
+          </div>
+
+          {/* Vertical Line */}
+          <div className="h-10 w-1 bg-orange-500 mx-auto"></div>
+
+          {/* College */}
+          <div className="w-80 md:w-96 border-2 border-red-300 rounded-md p-3 shadow-md">
+            <h1 className="text-lg font-semibold">College</h1>
+            <div className="flex items-center gap-2 mt-1">
+              <GiSchoolBag className="text-yellow-300 text-xl" />
+              <p className="text-sm">Computer Applications at Don Bosco College</p>
             </div>
-     </div>
+          </div>
+
+          {/* Vertical Line */}
+          <div className="h-10 w-1 bg-orange-500 mx-auto"></div>
+
+          {/* Oracle Course */}
+          <div className="w-80 md:w-96 border-2 border-red-300 rounded-md p-3 shadow-lg shadow-amber-500">
+            <h1 className="text-lg font-semibold">Course</h1>
+            <div className="flex items-center gap-2 mt-1">
+              <RiPresentationLine className="text-yellow-300 text-xl" />
+              <p className="text-sm">Oracle Database at Oracle University</p>
+            </div>
+          </div>
+
+          {/* Vertical Line */}
+          <div className="h-10 w-1 bg-orange-500 mx-auto"></div>
+
+          {/* Cyber Security Course */}
+          <div className="w-80 md:w-96 border-2 border-red-300 rounded-md p-3 shadow-lg shadow-amber-500">
+            <h1 className="text-lg font-semibold">Course</h1>
+            <div className="flex items-center gap-2 mt-1">
+              <RiPresentationLine className="text-yellow-300 text-xl" />
+              <p className="text-sm">Cyber Security in Standards and Regulations</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default myskill
+export default MySkill;
