@@ -32,6 +32,8 @@ body
   }
 }
 
+
+
 .animate-borderChange {
   animation: borderChange 4s infinite;
 }

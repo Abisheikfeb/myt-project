@@ -9,22 +9,22 @@ import 'react-circular-progressbar/dist/styles.css';
 const About = () => {
   return (
     <div id="aboutme" className="p-6 md:p-12">
-      {/* Title */}
+      
       <h1 className="text-center text-4xl md:text-5xl font-semibold">
         <span className="text-red-500">A</span>bout Me
       </h1>
 
-      {/* Grid Layout for Desktop */}
+      
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12">
 
-        {/* Left - Skills & Progress */}
+        
         <div className="flex flex-col items-center md:items-start space-y-6">
           <h1 className="text-2xl md:text-4xl font-semibold text-center md:text-start">
             I work on
           </h1>
           <p className="text-xl text-gray-500 text-center md:text-start">Some of my key skills</p>
 
-          {/* Progress Circle */}
+     
           <div className="w-40 h-40 md:w-48 md:h-48">
             <CircularProgressbar
               value={80}
@@ -38,7 +38,7 @@ const About = () => {
             />
           </div>
 
-          {/* Skill Set */}
+       
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-4">
               <FaJava className="text-5xl text-orange-600" />
@@ -55,7 +55,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Middle - About Section */}
+       
         <div className="flex flex-col justify-center md:justify-start items-center md:items-start space-y-6 border-l-2 border-r-2 border-gray-300 px-4 md:px-8">
           <p className="text-lg md:text-xl text-blue-100 text-center md:text-start leading-relaxed">
             As a Java and backend developer, I specialize in designing and implementing
