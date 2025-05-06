@@ -62,7 +62,7 @@ const Hero = () => {
           className="p-3 transition-transform  duration-300  ease-in-out transform hover:scale-110"
         >
           {showMore ? (
-            <span className="text-red-500 text-xl  font-bold">Hey, I am available</span>
+            <span className="text-red-500 text-xl z-40 font-bold"></span>
           ) : (
             <IoCallOutline className="text-blue-500" size={24} />
           )}

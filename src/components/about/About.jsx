@@ -65,8 +65,8 @@ const About = () => {
             My expertise lies in creating scalable APIs, managing databases, and optimizing
             system performance.
           </p>
-        </div>
-
+    </div>
+    <h1 className='text-red-300 text-7xl'> hellow world</h1>
         {/* Right - Strengths */}
         <div className="w-full bg-white border-2 p-6 shadow-xl rounded-lg">
           <h2 className="text-lg md:text-xl font-semibold mb-4 text-center md:text-start">Key Strengths</h2>
